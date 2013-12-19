@@ -1,4 +1,4 @@
-Rwend
+Quets Commerce
 =====
 
-Rwend é um projeto aberto para se encontrar aplicativos.
+Um aplicativo na qual um comerciante pode organizar de maneira mais simples seus clientes, e no futuro, seus afazeres.
