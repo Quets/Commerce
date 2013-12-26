@@ -1,25 +1,36 @@
-<!--
-    Quets Commerce
--->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Commerce</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="main.css"/>
-    </head>
-    <body>
-        <div class="main">
-            <header>
-                <div class="header">
-                    Controle de Clientes
-                </div>
-            </header>
-            <div class="clients">
-                <div class="nothing">
-                    Nenhum cliente cadastrado.
-                </div>
-            </div>
-        </div>
-    </body>
+  <head>
+	 <title>Cadastro de clientes</title>
+	 <link rel="stylesheet" href="main.css"/>
+	 <script src="main.js"></script>
+  </head>
+  <body>
+		<div id="main">
+		<div id="add_b" class="button">+</div>
+		<div class="header">
+			Histórico
+		</div>
+		<div id="error" class="error">
+			<div class="e_content">
+				<div class="alert">!</div>Nenhum dado armazenado.
+			</div>
+		</div>
+		<div class="info" id="info">
+		</div>
+		</div>
+		<div id='c_add' class="c_add">
+		<div id="sub_b" class="button"><</div>
+		<div class="header">
+			Novo registro.
+		</div>
+		<div class="form">
+		<input type="text" id="i_c" placeholder="Nome do cliente"><br />
+		<input type="text" id="i_i" placeholder="Instituição"><br />
+		<input type="text" id="i_p" placeholder="Produto vendido, ou pedido."><br />
+		<input type="text" id="i_v" placeholder="Valor pago."><br />
+		<input type="submit" value="Adicionar dados." onclick="process.load();" />
+		</div>
+		</div>
+  </body>
 </html>
