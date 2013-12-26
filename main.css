@@ -1,19 +1,119 @@
 body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Segoe UI';
-    font-size: 14px;
-}
-
-.header{
-    padding: 15px;
-    text-align: center;
-    background: rgb(40, 40, 40);
-    color: white;
-}
-
-.nothing{
-    padding: 15px;
-    margin-top: 50%;
-    text-align: center;
-}
+			padding: 0;
+			margin: 0;
+			font-family: Helvetica;
+			background: white;
+			color: black;
+			font-size: 14px;
+		}
+		
+		.header{
+			font-size: 16px;
+			padding: 30px 0px;
+			text-align: center;
+		}
+			
+		.error{
+			text-align: center;
+			display: none;
+		}
+		
+		.e_content{
+			padding: 11px 0;
+			text-align: center;
+			margin-top: 45%;
+			color: white;
+			background: rgb(0,100,225);
+			text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+			box-shadow: 0px 1px 0px rgb(0, 70, 155);
+			display: inline-block;
+			border-radius: 2px;
+			width: 260px;
+			
+		}
+		
+		.button{
+			padding: 9px 7px 7px 8px;
+			background: rgb(0,100,225);
+			color: white;
+			display: inline-block;
+			border-radius: 2px;
+			position: absolute;
+			top: 20px;
+			left: 15px;
+			font-size: 16px;
+			cursor: pointer;
+			box-shadow: 0px 1px 0px rgb(0, 30, 105);
+			text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+		}
+		
+		.alert{
+			color: white;
+			display: inline-block;
+			background: rgb(20,70,155);
+			padding: 11px;
+			margin: -11px;
+			position: absolute;
+			margin-left: -15%;
+			border-radius: 2px 0 0 2px;
+			box-shadow: 0px 1px 0px rgb(0, 30, 105);
+		}
+		
+		.info, .c_add, .inst, .price{display: none;}
+		.form{text-align: center;margin-top: 15%;}
+		
+		input[type=text]{
+			background: rgb(220, 220, 220);
+			padding: 11px 15px;
+			border-radius: 2px;
+			border:none;
+			font-family: Helvetica;
+			width: 200px;
+			margin: 5px;
+			box-shadow: 0px 2px 0px rgb(200, 200, 200);
+			text-shadow: 1px 1px 0px rgba(255, 255, 255,0.3);
+			outline: none;
+		}
+		
+		input[type=submit]{
+			padding: 11px 15px;
+			background: rgb(0, 100, 250);
+			border-radius: 2px;
+			box-shadow: 0px 2px 0px rgb(0, 70, 155);
+			text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+			color: white;
+			border: none;
+			width: 230px;
+			margin: 5px;
+		}
+		
+		.client:nth-child(2n+1){
+			background: rgb(230, 230, 230);
+		}
+		
+		.name{
+			color: rgb(220, 0, 0);
+			font-family: Segoe UI;
+			font-size: 18px;
+			padding: 15px 15px 7px;
+		}
+		
+		.option, .price{
+			padding: 0px 15px 15px;
+			font-size: 12px;
+		}
+		
+		.inst{
+			padding: 0px 15px 5px;
+			font-size: 12px;
+		}
+		
+		
+		.close{
+			position: absolute;
+			margin-top: 0px;
+			margin-left: 85%;
+			padding: 15px;
+			font-size: 16px;
+			cursor: pointer;
+		}
