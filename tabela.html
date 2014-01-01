@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+		<title>Tabela de preços</title>
+		<link rel="stylesheet" href="main.css"/>
+		<script src="main.js"></script>
+  </head>
+  <body class="body_CV">
+		<div class="header_CV">
+			Nova tabela de preços. 
+		</div>
+		<div class="content_CV">
+			A Tabela agiliza a busca de itens.
+		</div>
+		<div class="options_CV">
+			<div id="tabela.content"></div>
+			<div>
+				<form method="GET" action="#" onsubmit="process.tabela.add();return false;">
+					<input type="text" id="tabela.item"  placeholder="Item a venda" class="input_CV"/>
+					<input type="text" id="tabela.price" placeholder="Preço" class="price_CV"/>
+					<input type="submit" style="position: absolute;top: -100%;"/>
+				</form>
+			</div>
+		</div>
+  </body>
+</html>
