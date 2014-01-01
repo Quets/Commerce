@@ -1,16 +1,34 @@
-body{
+		body{
 			padding: 0;
 			margin: 0;
 			font-family: Helvetica;
 			background: white;
 			color: black;
 			font-size: 14px;
+			overflow-x: hidden;
+		}
+		
+		::-webkit-scrollbar{
+			background: white!important;
+			width: 10px;
+		}
+		
+		::-webkit-scrollbar-thumb{
+			background: rgba(0,0,0,0.3);
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			border-radius: 30px;
 		}
 		
 		.header{
 			font-size: 16px;
 			padding: 30px 0px;
 			text-align: center;
+			background: -webkit-linear-gradient(bottom, transparent 0%, white 10%);
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: auto;
+			z-index: 1;
 		}
 			
 		.error{
@@ -33,18 +51,20 @@ body{
 		}
 		
 		.button{
-			padding: 9px 7px 7px 8px;
+			padding: 13px 11px 11px 11px;
 			background: rgb(0,100,225);
 			color: white;
 			display: inline-block;
 			border-radius: 2px;
-			position: absolute;
+			position: fixed;
 			top: 20px;
 			left: 15px;
 			font-size: 16px;
 			cursor: pointer;
 			box-shadow: 0px 1px 0px rgb(0, 30, 105);
 			text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+			z-index: 3;
+			text-decoration: none;
 		}
 		
 		.alert{
@@ -59,8 +79,10 @@ body{
 			box-shadow: 0px 1px 0px rgb(0, 30, 105);
 		}
 		
-		.info, .c_add, .inst, .price{display: none;}
+	    .perfil, .static, .price, .inst, .opt{display:none}
 		.form{text-align: center;margin-top: 15%;}
+		.info{margin-top: 80px;}
+		.c_add{margin-top: 130px;}
 		
 		input[type=text]{
 			background: rgb(220, 220, 220);
@@ -87,33 +109,266 @@ body{
 			margin: 5px;
 		}
 		
-		.client:nth-child(2n+1){
-			background: rgb(230, 230, 230);
+		.client{
+			margin-left: 8%;
 		}
 		
 		.name{
 			color: rgb(220, 0, 0);
 			font-family: Segoe UI;
 			font-size: 18px;
-			padding: 15px 15px 7px;
+			margin-left: 50px;
+			padding: 20px 15px 7px;
+			cursor: pointer;
 		}
 		
-		.option, .price{
-			padding: 0px 15px 15px;
+		.option{
+			padding: 15px 15px 15px;
+			font-size: 12px;
+			cursor: pointer;
+		}
+		
+		.price{
+			padding: 5px 15px 0px;
 			font-size: 12px;
 		}
+		
+		.option, .price, .inst{margin-left: 50px;}
+		.opt{margin-left: 55px;margin-top: 15px;}
 		
 		.inst{
-			padding: 0px 15px 5px;
+			padding: 0px 15px 0px;
 			font-size: 12px;
 		}
 		
+		.date{
+			border-radius: 2px;
+			background: rgb(220, 0, 0);
+			box-shadow: 0px 1px 0px rgb(200, 0, 0);
+			text-shadow: -1px -1px 0px rgba(0, 0, 0,0.3);
+			padding: 7px 7px;
+			position: absolute;
+			font-size: 10px;
+			color: white;
+			left: 12px;
+			margin-top: 5%;
+		}
 		
 		.close{
 			position: absolute;
-			margin-top: 0px;
-			margin-left: 85%;
-			padding: 15px;
+			margin-top: 20px;
+			margin-left: 75%;
+			padding: 7px 9px;
 			font-size: 16px;
 			cursor: pointer;
+			background: rgb(230, 230, 230);
+			box-shadow: 0px 1px 0px rgb(200, 200, 200);
+			text-shadow: 1px 1px 0px rgba(255, 255, 255,0.3);
+			border-radius: 2px;
 		}
+		
+		.b_p{
+			padding: 9px 9px;
+			background: rgb(0, 100, 250);
+			border-radius: 2px;
+			box-shadow: 0px 2px 0px rgb(0, 70, 155);
+			text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+			font-size: 12px;
+			display: inline-block;
+			color: white;
+			border: none;
+			width: 105px;
+			margin: 5px;
+			cursor: pointer;
+		}
+		
+		.b_p:active{
+			background: rgb(0, 0, 220);
+			box-shadow: 0px 1px 0px rgb(0, 0, 125);
+		}
+		
+		.menu{
+			background: white;
+			margin-top: 0px;
+			text-align: center;
+			margin-left: 0px;
+			margin-top: 25px;
+		}
+		
+		.menu .li{
+			margin: 0;
+			padding: 9px 7px;
+			display: inline-block;
+			text-align: center;
+			width: 120px;
+			border-radius: 2px 0 0 2px;
+			cursor: pointer;
+			background: rgb(230, 230, 230);
+			box-shadow: 0px 1px 0px rgb(170, 170, 170);
+			text-shadow: -1px -1px 0px rgba(255, 255, 255,0.3);
+			margin-right: -1px;
+			font-size: 12px;
+		}
+		
+		.menu .li:last-child{
+			border-radius: 0 2px 2px 0;
+			border-left: rgb(230, 230, 230);
+			margin-left: -6px;
+		}
+		
+		.menu .li.selected{
+			background: rgb(0, 100, 250);
+			color: white;
+			box-shadow: 0px 1px 0px rgb(0, 70, 155);
+			text-shadow: -1px -1px 0px rgba(0,0,0,0.3);
+		}
+		
+		.i_p{margin-top: 130px;}
+		.static{ margin-top: 135px;}
+		
+		.g{
+			font-size: 14px;
+			font-family: Segoe UI;
+			background: white;
+		}
+		
+		.g .g_l{
+			padding: 17px 17px;
+			color: black;
+			display: inline-block;
+			width: 43.5%;
+			margin: -5px;
+			text-align: center;
+		}
+		
+		.li_c{
+			border-radius: 2px;
+			background: white;
+			box-shadow: 1px 1px 0px rgb(210, 210, 210),
+						1px -1px 0px rgb(210, 210, 210);
+			background: white;
+			margin: 15px;
+			border-left: 2px solid rgb(230,0,0);
+		}
+		
+		.l_n{
+			padding: 15px;
+			display: inline-block;
+			width: 100px;
+		}
+		
+		.l_p{
+			margin: 10px 8px;
+			padding: 5px 7px;
+			display: inline-block;
+			width: 40px;
+			text-align: center;
+			background: rgb(220, 0, 0);
+			color: white;
+			box-shadow: inset 0px 1px 0px rgb(200, 0, 0),
+						inset 1px 1px 7px rgb(200, 0, 0);
+			text-shadow: -1px -1px 0px rgba(0, 0, 0,0.3);
+			border-radius: 2px;
+		}
+		
+		.p_l_p{
+			display: inline-block;
+			width: 130px;
+			margin: -3px 8px;
+			height: 15px;
+			background: rgb(230, 230, 230);
+			border-radius: 2px;
+		}
+		
+		.p_l{
+			position: absolute;
+			height: 15px;
+			background: rgb(220, 0, 0);
+			border-radius: 2px;
+		}
+		
+		/* Tabela de preços */
+		
+		.body_CV{
+			padding: 0;
+			margin: 0;
+			font-size: 12px;
+			font-family: Helvetica;
+			background: white;
+		}
+		
+		.header_CV{
+			padding: 30px;
+			text-align: center;
+			font-size: 22px;
+		}
+		
+		.content_CV{
+			text-align: center;
+		}
+		
+		.options_CV{
+			background: rgb(220, 220, 220);
+			padding: 0;
+			border-radius: 2px;
+			border:none;
+			font-family: Helvetica;
+			width: 240px!important;
+			margin: 30px 5px 5px 9%;
+			box-shadow: 0px 2px 0px rgb(200, 200, 200);
+			text-shadow: 1px 1px 0px rgba(255, 255, 255,0.3);
+			outline: none;
+		}
+		
+		.options_CV li{
+			list-style: none;
+		}
+		
+		.input_CV, .tabela_item_CV{
+			display: inline-block;
+			color: rgb(120, 120, 120)!important;
+			background: transparent!important;
+			padding: 11px 15px!important;
+			border-radius: 2px 0 0 2px!important;
+			border:none!important;
+			font-family: Helvetica!important;
+			width: 120px!important;
+			margin: 0px!important;
+			box-shadow: none!important;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255,0.3)!important;
+			outline: none!important;	
+		}
+		
+		.price_CV, .tabela_preco_CV{
+			display: inline-block;
+			background: rgb(240, 240, 240)!important;
+			padding: 11px 15px!important;
+			border-radius: 0!important;
+			border:none!important;
+			font-family: Helvetica!important;
+			width: 50px!important;
+			margin: 0px!important;
+			box-shadow: 0px 2px 0px rgb(220, 220, 220)!important;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255,0.3)!important;
+			outline: none!important;	
+			position: absolute;
+			left: 60%;
+		}
+		
+		.close_CV{
+			display: inline-block;
+			background: rgb(240, 240, 240)!important;
+			padding: 11px 15px 11px 12px!important;
+			border:none!important;
+			font-family: Helvetica!important;
+			width: 0px!important;
+			margin: 0!important;
+			box-shadow: 0px 2px 0px rgb(220, 220, 220)!important;
+			text-shadow: 1px 1px 0px rgba(255, 255, 255,0.3)!important;
+			outline: none!important;	
+			position: absolute;
+			left: 87%;
+			cursor: pointer;
+		}
+		
+		.close_CV:last-child{border-radius: 0 0 2px 2px;}
