@@ -2,14 +2,17 @@
 <html>
   <head>
 	 <title>Cadastro de clientes</title>
+	 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	 <link rel="stylesheet" href="main.css"/>
 	 <script src="main.js"></script>
   </head>
   <body>
 		<div id="main">
-		<div id="add_b" class="button">+</div>
-		<div class="header">
-			Histórico
+		<div class="h_d">
+			<a id="add_b" href="register.html" class="button">+</a>
+			<div class="header">
+				Histórico
+			</div>
 		</div>
 		<div id="error" class="error">
 			<div class="e_content">
@@ -19,17 +22,30 @@
 		<div class="info" id="info">
 		</div>
 		</div>
-		<div id='c_add' class="c_add">
-		<div id="sub_b" class="button"><</div>
+		<div id='perfil' class="perfil">
+		<div id="sub_b_1" class="button"><</div>
 		<div class="header">
-			Novo registro.
+		<span id='p_n'></span>
+		<div id="menu" class="menu">
+			<div id="menu.li.0" class='li selected' onclick="process.menu.select(0)">Compras</div>
+			<div id="menu.li.1" class='li' 		 onclick="process.menu.select(1)">Estatisticas</div>
 		</div>
-		<div class="form">
-		<input type="text" id="i_c" placeholder="Nome do cliente"><br />
-		<input type="text" id="i_i" placeholder="Instituição"><br />
-		<input type="text" id="i_p" placeholder="Produto vendido, ou pedido."><br />
-		<input type="text" id="i_v" placeholder="Valor pago."><br />
-		<input type="submit" value="Adicionar dados." onclick="process.load();" />
+		</div>
+		<div id="info_p" class="i_p"></div>
+		<div id="static" class="static">
+			<div class="g">
+				<div class="g_l">R$<span id='static.dinheiro.total'></span> gastados.</div>
+				<div class="g_l"><span id='static.compras'></span> Compra(s)</div>
+			</div>		
+			<div class="g_li_i">
+				<div class="li_c">
+					<div class="l_n">Frango assado</div>
+					<div class="l_p">9,00</div>
+					<div class="p_l_p">
+						<div class="p_l" style="width: 65px;"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		</div>
   </body>
